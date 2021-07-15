@@ -11,6 +11,7 @@ gem 'rails', '~> 5.2', '>= 5.2.3'
 gem 'pg', '~> 1.1', '>= 1.1.4'
 gem 'puma', '~> 3.12'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
+gem 'sprockets', '~>3.0'
 
 gem 'active_model_serializers', '~> 0.10.8'
 gem 'bootsnap', '~> 1.3', require: false
