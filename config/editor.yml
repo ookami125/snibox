@@ -33,6 +33,7 @@ languages:
   markdown: Markdown
   nginx: Nginx
   objectivec: Objective-C
+  octave: Octave/Matlab
   perl: Perl
   php: PHP
   powershell: Powershell
