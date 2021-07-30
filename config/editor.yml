@@ -7,7 +7,6 @@ languages:
   coffeescript: CoffeeScript
   crystal: Crystal
   css: CSS
-  cpython: Cpython
   bash: Bash
   d: D
   dart: Dart
