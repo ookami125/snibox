@@ -26,6 +26,7 @@ languages:
   java: Java
   javascript: JavaScript
   julia: Julia
+  stex: LaTeX
   less: LESS
   livescript: Livescript
   lua: Lua
