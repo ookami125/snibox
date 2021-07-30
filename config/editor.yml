@@ -49,6 +49,7 @@ languages:
   stylus: Stylus
   swift: Swift
   tcl: Tcl
+  toml: TOML
   twig: Twig
   xml: XML
   xquery: XQuery
