@@ -23,7 +23,7 @@ gem 'webpacker', '~> 4.0'
 
 group :development do
   gem 'awesome_print', '~> 1.8'
-  gem 'better_errors', '~> 2.4'
+  gem 'better_errors', '~> 2.8'
   gem 'binding_of_caller', '~> 0.8.0'
   gem 'debug-extras'
   gem 'listen', '~> 3.1'
