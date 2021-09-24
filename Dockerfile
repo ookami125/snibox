@@ -21,8 +21,7 @@ ENV NODE_ENV production
 
 ENV SECRET_KEY_BASE="08898973823f6f1d121ce30fb8adc1c559dcfc08f358cfc0298e4aad81b8c9d798e8249e3a4b26c04255cf8b2d71eaf8eda865d173ae3fe6fb1a599d1b1fa260"
 
-RUN git clone https://github.com/MohamedElashri/snibox-1 /app && cd /app
-COPY . /app
+COPY Gemfile Gemfile.lock ./
 
 RUN bundle update --bundler
 
@@ -32,6 +31,8 @@ RUN bundle update rails
 
 
 RUN echo "gem 'sqlite3', '~> 1.3.6'" >> Gemfile && gem install bundler && bundle install
+
+COPY . ./
 
 VOLUME /app/db/database
 
