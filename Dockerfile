@@ -13,6 +13,8 @@ RUN apk add --no-cache \
 
 WORKDIR /app
 
+COPY Gemfile Gemfile.lock ./
+
 ENV RAILS_SERVE_STATIC_FILES=true
 ENV RAILS_ENV production
 ENV RACK_ENV production
