@@ -7,7 +7,7 @@ class Snippet < ApplicationRecord
   accepts_nested_attributes_for :label
   accepts_nested_attributes_for :snippet_files, allow_destroy: true
 
-  validates :title, presence: true, length: { maximum: 40 }
+  validates :title, presence: true, length: { maximum: 100 }
   validates :description, length: { maximum: 10000 }
 
   after_commit :remove_unused_labels
