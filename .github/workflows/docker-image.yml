@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag snibox-test:$(date +%s)
+      run: docker buildx build --platform linux/amd64,linux/arm64 -t melashri/sinbox:$(date +%s)
