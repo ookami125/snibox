@@ -30,7 +30,7 @@ RUN gem install bundler:1.17.2
 RUN bundle update rails
 
 
-RUN echo "gem 'sqlite3', '~> 1.3.6'" >> Gemfile && gem install bundler && bundle install
+RUN echo "gem 'sqlite3', '~> 1.3.6'" >> Gemfile && gem install bundler -v 2.4.22 && bundle install
 
 COPY . ./
 
