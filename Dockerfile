@@ -13,7 +13,6 @@ RUN apk add --no-cache \
 
 WORKDIR /app
 
-
 ENV RAILS_SERVE_STATIC_FILES=true
 ENV RAILS_ENV production
 ENV RACK_ENV production
@@ -29,14 +28,12 @@ RUN gem install bundler:1.17.2
 
 RUN bundle update rails
 
-
-RUN echo "gem 'sqlite3', '~> 1.3.6'" >> Gemfile && gem install bundler -v 2.4.22 && bundle install
-
 COPY . ./
 
 VOLUME /app/db/database
 
-RUN yarn install --check-files; bundle exec rake assets:precompile
+RUN yarn install --check-files
+RUN bundle exec rake assets:precompile
 
 RUN apk del \
     git \

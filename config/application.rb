@@ -22,6 +22,16 @@ module Snibox
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    # SQLite3 fix
+    config.active_record.sqlite3.represent_boolean_as_integer = true
+
+    # Logging to STDOUT for Docker
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+    config.log_level = (ENV['LOGLEVEL'] || "debug").to_sym
+    config.log_tags = [ :request_id ]
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

@@ -63,14 +63,16 @@ $card-header-height: 45px;
   div {
     background-color:  #4a4a4a;
     color: whitesmoke;
-    padding: 0.1rem 0.8rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    padding: 0.1rem 0.4rem;
+    margin-right: 0.2rem;
+    //margin-left: 0.5rem;
     border-radius: 13px;
+    font-size: 0.8em;
+    height: 100%;
   }
   h4  {
     margin-right: 0.5rem;
-    margin-top: 0.2rem;
+    //margin-top: 0.2rem;
   }
 }
 
