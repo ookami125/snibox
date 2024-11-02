@@ -46,9 +46,9 @@ class Api::V1::SnippetsController < Api::BaseController
     return if data[:label_attributes]['name'].nil?
     labels = data[:label_attributes]['name'].split(',')
     labels.each { |label|
-      labels_array << label.strip.upcase
-      @label = Label.find_by(name: label.strip.upcase)
-      Label.create(name: label.strip.upcase).labelings.build(snippet: @snippet).save if @label.nil?
+      labels_array << label.strip
+      @label = Label.find_by(name: label.strip)
+      Label.create(name: label.strip).labelings.build(snippet: @snippet).save if @label.nil?
       @label.labelings.build(snippet: @snippet).save if @label.present? && !@label.labelings.find_by(snippet_id: @snippet)
     }
     delete_unused_label(labels_array)
